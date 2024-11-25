@@ -1,0 +1,16 @@
+#############################################################1: make 
+
+############################################################2: 安装依赖项
+# Debian/Ubuntu
+apt-get install linux-headers-$(uname -r)
+
+# Arch/Manjaro
+pacman -Sy linux-headers
+
+# RHEL/Rocky/CentOS/Fedora
+yum install kernel-headers kernel-devel
+
+###########################################################3: 导入kernel
+modprobe libcrc32c
+insmod apfs.ko
+lsmod | grep apfs
