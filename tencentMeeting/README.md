@@ -27,3 +27,9 @@ vim /etc/gdm/custom.conf #add
 WaylandEnable=false
 DefaultSession=gnome-xorg.desktop
 ```
+
+### if the fonts display failure
+
+```sh
+QT_FONT_DPI=96 ./opt/wemeet/wemeetapp.sh
+```
